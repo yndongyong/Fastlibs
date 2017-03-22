@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+    // Define versions in a single place
+    ext {
+        applicationId = "com.yndongyong.widget.refreshlayout"
+// Sdk and tools
+        buildToolsVersion = '25.0.0'
+        compileSdkVersion = 25
+        minSdkVersion = 16
+        targetSdkVersion = 25
+//时间：2017.2.13；每次修改版本号都要添加修改时间
+        versionCode = 1
+        versionName = "1.0"
+        javaVersion = JavaVersion.VERSION_1_8
+
+// App dependencies version
+        supportLibraryVersion = "25.3.0"
+        retrofitVersion = "2.1.0"
+        glideVersion = "3.7.0"
+        eventbusVersion = "3.0.0"
+        gsonVersion = "2.8.0"
+        constraint_layoutVersion = "1.0.0-beta5"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
